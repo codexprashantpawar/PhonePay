@@ -1,0 +1,35 @@
+.paymentScreen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #5f259f;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 15px;
+}
+
+.headerTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.content {
+  flex: 1;
+  padding: 15px;
+  background-color: #f5f7fa;
+}
+

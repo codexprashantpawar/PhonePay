@@ -1,0 +1,24 @@
+.statusBar {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.time {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.icons {
+  display: flex;
+  gap: 8px;
+}
+

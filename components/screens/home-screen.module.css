@@ -1,0 +1,242 @@
+.homeScreen {
+  padding: 0 0 70px 0;
+}
+
+.header {
+  background: linear-gradient(135deg, #5f259f 0%, #8c52ff 100%);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background-color: #8c52ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.userName {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.headerIcons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.iconBadge {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff5252;
+  color: white;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.balanceCard {
+  background-color: white;
+  margin: 15px;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.animateIn {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.balanceInfo {
+  margin-bottom: 15px;
+}
+
+.balanceLabel {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.balanceAmount {
+  font-size: 24px;
+  font-weight: bold;
+  color: #212529;
+  margin-top: 5px;
+}
+
+.balanceActions {
+  display: flex;
+  gap: 10px;
+}
+
+.actionButton {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #5f259f;
+}
+
+.actionIcon {
+  background-color: #5f259f;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.section {
+  padding: 15px 15px 5px 15px;
+  transform: translateY(20px);
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.1s;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212529;
+  margin: 0;
+}
+
+.seeAll {
+  font-size: 12px;
+  color: #5f259f;
+  font-weight: 500;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.serviceItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.serviceIcon {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #5f259f;
+}
+
+.serviceItem span {
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.sponsoredBanner {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.transactions {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.transactionIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  color: #5f259f;
+}
+
+.transactionInfo {
+  flex: 1;
+}
+
+.transactionName {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.transactionDate {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.transactionAmount {
+  font-weight: 600;
+  color: #dc3545;
+}
+

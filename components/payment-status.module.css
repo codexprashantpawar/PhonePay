@@ -1,0 +1,96 @@
+.success {
+  background-color: #0a5d36;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+}
+
+.error {
+  background-color: #f8d7da;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.processing {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.statusIcon {
+  margin-bottom: 20px;
+  color: #4ade80;
+}
+
+.error .statusIcon {
+  color: #dc3545;
+}
+
+.statusTitle {
+  margin: 0 0 15px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.statusMessage {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.error .statusMessage {
+  color: #495057;
+}
+
+.transactionId {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.error .transactionId {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px dashed #ced4da;
+}
+
+.resetButton {
+  background-color: #4ade80;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.error .resetButton {
+  background-color: #5f259f;
+}
+
+.resetButton:hover {
+  opacity: 0.9;
+}
+
+.loader {
+  margin-bottom: 20px;
+}
+
+.spinningLoader {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
