@@ -8,7 +8,7 @@ interface PaymentFormProps {
   title: string
   inputLabel: string
   inputPlaceholder: string
-  paymentType: "mobile" | "dth" | "electricity" | "water"
+  paymentType: "mobile" | "dth" | "electricity" | "water" |"tomobile"
   icon: React.ReactNode
 }
 

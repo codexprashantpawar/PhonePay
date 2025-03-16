@@ -1,75 +1,83 @@
-"use client"
+"use client";
 
-import { ArrowLeft, Smartphone, Tv, Zap, Droplet } from "lucide-react"
-import type { PaymentType } from "../phonepe-app"
-import PaymentForm from "../payment-form"
-import styles from "./payment-screen.module.css"
+import { ArrowLeft, Smartphone, Tv, Zap, Droplet, Phone } from "lucide-react";
+import type { PaymentType } from "../phonepe-app";
+import PaymentForm from "../payment-form";
+import styles from "./payment-screen.module.css";
 
 interface PaymentScreenProps {
-  type: PaymentType
-  onBack: () => void
+  type: PaymentType;
+  onBack: () => void;
 }
 
 export default function PaymentScreen({ type, onBack }: PaymentScreenProps) {
   const getTitle = () => {
     switch (type) {
       case "mobile":
-        return "Mobile Recharge"
+        return "Mobile Recharge";
       case "dth":
-        return "DTH Recharge"
+        return "DTH Recharge";
       case "electricity":
-        return "Electricity Bill"
+        return "Electricity Bill";
       case "water":
-        return "Water Bill"
+        return "Water Bill";
+      case "tomobile":
+        return "To Mobile Number";
       default:
-        return "Payment"
+        return "Payment";
     }
-  }
+  };
 
   const getIcon = () => {
     switch (type) {
       case "mobile":
-        return <Smartphone size={20} />
+        return <Smartphone size={20} />;
       case "dth":
-        return <Tv size={20} />
+        return <Tv size={20} />;
       case "electricity":
-        return <Zap size={20} />
+        return <Zap size={20} />;
       case "water":
-        return <Droplet size={20} />
+        return <Droplet size={20} />;
+      case "tomobile":
+        return <Phone size={20} />;
       default:
-        return null
+        return <Smartphone size={20} />; 
     }
-  }
+  };
 
   const getLabel = () => {
     switch (type) {
       case "mobile":
-        return "Mobile Number"
+        return "Mobile Number";
       case "dth":
-        return "DTH/Customer ID"
+        return "DTH/Customer ID";
       case "electricity":
-        return "Consumer Number"
+        return "Consumer Number";
       case "water":
-        return "Consumer Number"
+        return "Consumer Number";
+      case "tomobile":
+        return "Mobile Number";
       default:
-        return "Account Number"
+        return "Account Number";
     }
-  }
+  };
 
   const getPlaceholder = () => {
     switch (type) {
       case "mobile":
-        return "Enter 10-digit mobile number"
+        return "Enter 10-digit mobile number";
       case "dth":
-        return "Enter DTH/Customer ID"
+        return "Enter DTH/Customer ID";
       case "electricity":
-        return "Enter consumer number"
+        return "Enter consumer number";
       case "water":
-        return "Enter consumer number"
+        return "Enter consumer number";
+      case "tomobile":
+        return "Enter  mobile number";
       default:
-        return "Enter account number"
+        return "Enter account number";
     }
-  }
+  };
 
   return (
     <div className={styles.paymentScreen}>
@@ -84,11 +92,10 @@ export default function PaymentScreen({ type, onBack }: PaymentScreenProps) {
           title={getTitle()}
           inputLabel={getLabel()}
           inputPlaceholder={getPlaceholder()}
-          paymentType={type || "mobile"}
+          paymentType={type}
           icon={getIcon()}
         />
       </div>
     </div>
-  )
+  );
 }
-

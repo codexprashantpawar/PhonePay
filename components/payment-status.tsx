@@ -1,5 +1,4 @@
-"use client"
-
+import { useEffect } from "react"
 import { CheckCircle, XCircle, Loader } from "lucide-react"
 import styles from "./payment-status.module.css"
 
@@ -11,6 +10,13 @@ interface PaymentStatusProps {
 }
 
 export default function PaymentStatus({ status, message, randomNumber, onReset }: PaymentStatusProps) {
+  useEffect(() => {
+    if (status === "success") {
+      const successSound = new Audio("/sound.mpeg") 
+      successSound.play()
+    }
+  }, [status])
+
   if (status === "processing") {
     return (
       <div className={styles.processing}>
@@ -45,4 +51,3 @@ export default function PaymentStatus({ status, message, randomNumber, onReset }
     </div>
   )
 }
-
